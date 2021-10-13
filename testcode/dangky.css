@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    border:none;
+   
+}
+:root{
+    --bg1:#9b59b6;
+    --bg2:#3498db;
+    --text:#26ade4;
+}
+body {
+    overflow: hidden;
+    background-color: #ededed;
+}
+.container {
+    display: grid;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ 
+.form {
+    border: 1px solid #80808000;
+    width: 350px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px 0px grey;
+    background-color: white;
+    
+}
+h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+ 
+label {
+   padding-left: 25px;
+    display: block;
+    font-weight: lighter;
+ 
+}
+input{
+    display: block;
+    border-bottom: 2px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    outline-style: none;
+    height: 15px;
+}
+input[type="text"] {
+  
+   margin-bottom: 25px;
+    width: 80%;
+    margin-left: 25px;
+}
+input[type="password"]{
+    margin-bottom: 25px;
+    width: 80%;
+    margin-left: 25px;
+}
+ 
+input#submit {
+    height: 35px;
+    width: 100%;
+    
+    margin-bottom: 30px;
+    background: linear-gradient(120deg, var(--bg1),var(--bg2),var(--bg1));
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background-size: 200%;
+   
+}
+.dangky {
+    padding: 10px 20px;
+}
+input#submit:hover{
+    background-position: right;
+}
+ 

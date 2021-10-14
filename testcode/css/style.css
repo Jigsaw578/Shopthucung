@@ -27,7 +27,6 @@
 }
 header {
 	background-color: #FA8258;
-	padding: 10px 0 10px 0;
 }
 a:hover {
 	color: black;
@@ -103,7 +102,42 @@ ul.menu_child li {
 	display: block;
 }
 
+/*Slider*/
+.mySlides {
+	display: none;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: unset;
+}
+.mySlides img {
+	vertical-align: middle;
+	height: 400px;
+}
+.prev , .next{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bolder;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
 
 .text {
 	color: #f2f2f2;
@@ -169,6 +203,7 @@ ul.menu_child li {
 .image img {
 	  width: 100%;
 	  height: 200px;
+	  border-radius: 5px;
 }
 .card {
 	  border: 3px ridge;

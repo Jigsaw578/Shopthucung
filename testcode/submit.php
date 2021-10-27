@@ -13,7 +13,7 @@
         }
         $sql = "SELECT * FROM user WHERE username='$username' ";
         $old = mysqli_query($conn,$sql);
-        // $password = mp5($password);
+        // $password = md5($password);
         if (mysqli_num_rows($old) > 0) {
             $_SESSION["thongbao"] = "Username đã tồn tại";
             header("Location:dangky.php");

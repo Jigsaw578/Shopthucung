@@ -76,7 +76,7 @@ p {
 	float: left;
 	margin-left: 20px;
 	list-style: none;
-
+	margin-top: 10px;
 }
 .menu {
 	display: flex;

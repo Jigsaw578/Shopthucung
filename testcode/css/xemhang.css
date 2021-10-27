@@ -104,7 +104,13 @@ h3{
 	color: rgb(10, 42, 221);
     padding-bottom: 20px;
 }
-
+.sp-text{
+    border: 1px solid rgb(231, 173, 14);
+    margin: 45px;
+    border-radius: 20px;
+    font-size: 1.35em;
+    padding: 20px;
+}
 .bang-ykien{
     padding-top: 15px;
     padding-left: 45px;
@@ -112,11 +118,4 @@ h3{
 }
 .hat3{
     padding-left: 20px;
-}
-.suynghivethucung{
-    border: 1px solid rgb(231, 173, 14);
-    margin: 45px;
-    border-radius: 20px;
-    font-size: 1.35em;
-    padding: 20px;
 }

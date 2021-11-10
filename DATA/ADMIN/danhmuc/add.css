@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin:0;
+}
+.menu1{
+    padding: 10px 10px;
+}
+.box h1{
+    border: 1px solid #ccc;
+    
+    background:#ccc;
+    padding: 15px 30px;
+    border-radius:10px;
+    margin:50px;
+}
+.box2 form{
+    border: 1px solid #ccc;
+                
+     background:#ccc;
+     padding: 15px 30px;
+     border-radius:10px;
+     margin:15px;
+}

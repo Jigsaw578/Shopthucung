@@ -4,8 +4,13 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../Versatile/jquery.easy_slides.css" rel="stylesheet">
     <link rel="stylesheet" href="css/xemhang.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Versatile/Jquery.easy_slides.js"></script>
     <title>Xem thú cưng</title>
 
 </head>
@@ -90,67 +95,80 @@
                      </div>
              </div>   
     </div>
-    <h3 class="hat3">MỘT SỐ THÚ CƯNG KHÁC</h3>
-    <div class="supper-col-one">
-        <div class="col-one">
-            <div class="card">
-                <div class="image">
-                    <a href="golden.html"><img src="images/Golden.jpg"></a>
-                </div>
-                <div class="name">
-                    <a href="golden.html"><p>Golden</p></a>
-                </div>
-                <div class="price">
-                    <a href="golden.html"><p>6.000.000 VNĐ</p></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-one">
-            <div class="card">
-                <div class="image">
-                    <a href="becgie.html"><img src="images/Becgie.jpg"></a>
-                </div>
-                <div class="name">
-                    <a href="becgie.html"><p>Becgie</p></a>
-                </div>
-                <div class="price">
-                    <a href="becgie.html"><p>5.000.000 VNĐ</p></a>
-                </div>
-            </div>
-        </div>
+    <div class="bangthongtin">
+        <h3 class="thongtin">Thông tin về thú cưng</h3>
+        <table border="1">
+            <caption>Bảng Thông tin thú cưng</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2" width="300px">Đặc điểm</th>
+                    <th rowspan="3">Thông tin thú cưng</th>
+                </tr>
+            </thead>
 
-        <div class="col-one">
-            <div class="card">
-                <div class="image">
-                    <a href="alskan.html"><img src="images/Alaskan1.jpg"></a>
-                </div>
-                <div class="name">
-                    <a href="alskan.html"><p>Alaskan</p></a>
-                </div>
-                <div class="price">
-                    <a href="alskan.html"><p>5.000.000 VNĐ</p></a>
-                </div>
-            </div>
-        </div>
+            <tbody>
+                <tr>
+                    <td>Chủng loài</td>
+                    <td>Alaskan</td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>Giống cái</td>
+                </tr>
+                <tr>
+                    <td>Cân nặng</td>
+                    <td>17 Kilogam</td>
+                </tr>
+                <tr>
+                    <td>Độ tuổi</td>
+                    <td>17 tháng</td>
+                </tr>
+                <tr>
+                    <td>Tình trạng sức khỏe</td>
+                    <td>Tốt</td>
+                </tr>
+                    <td>Tình trạng tiêm Vác-xin</td>
+                    <td>Đã tiên đầy đủ</td>
+                </tr>
+                <tr>
+                    <td>Đặc điểm ngoại hình</td>
+                    <td>Lông trắng, rất ngáo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="hat3">MỘT SỐ THÚ CƯNG KHÁC</h3>
+        <div class="slider slider_four_in_line">
+            <div class="col">
+				<a href="golden.html"><img src="images/Golden.jpg"></a>
+               <p class="mot"> Golden-5.000.000Đ </p>
+			</div>
+            
+            <div class="col">
+			    <a href="becgie.html"><img src="images/Becgie.jpg"></a>
+                <p class="mot">Becgie-5.000.000Đ</p>
+			</div>
     
+            <div class="col">
+				<a href="alskan.html"><img src="images/Alaskan1.jpg"></a>
+                <p class="mot">Alaskan-5.000.000Đ</p>
+			</div>
+        
+            <div class="col">
+				<a href="husky.html"><img src="images/Husky3.jpg"></a>
+                <p class="mot">Husky-5.000.000Đ</p>
+			</div>
     
-        <div class="col-one">
-            <div class="card">
-                <div class="image">
-                    <a href="husky.html"><img src="images/Husky3.jpg"></a>
-                </div>
-                <div class="name">
-                    <a href="husky.html"><p>Husky</p></a>
-                </div>
-                <div class="price">
-                    <a href="husky.html"><p>5.000.000 VNĐ</p></a>
-                </div>
-            </div>
+            <div class="next_button"></div>
+            <div class="prev_button"></div>
         </div>
+        <script>
+            $('.slider_four_in_line').EasySlides()
+        </script>
     </div>
 
-    <div class="suynghivethucung">
+    <div class="suynghivethucung"> 
         <h3 class="suynghi">Suy nghĩ về những chú thú cưng</h3>
         <p class="sp-text">
             Là một con người thì ai chả có thú vui. Với chúng tôi thì đó là ngắm nhìn những chú thú cưng chạy loanh quanh xung quanh mình cọ cọ đầu vào người chúng ta đòi ôm, đòi ăn... Rồi những lúc đau đầu khi ôm nó đi tắm, những lúc tắm là những lúc đánh trận với quân địch là chú thú cưng của mình, lúc đấy khổ nhưng mà vui. Tắm cho nó sạch sẽ rồi lại ôm nó đi ngủ với những chú chó to thì nó không khác gì con gấu bông cỡ lớn cả, còn với những chú mèo thì nó như cục bông nhìn rất đáng yêu.
@@ -168,7 +186,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 <footer>

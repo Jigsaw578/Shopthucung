@@ -87,16 +87,17 @@
     border: 1px solid black;
     background-color: rgb(221, 218, 200);
 }
-.supper-col-one{
+
+.slider{
     display: flex;
-	max-width: 100%;
 	flex-wrap: wrap;
-	margin-left: 15px;
-	margin-right: 15px;
-	background-color: ghostwhite;
 	border-radius: 10px;
-	padding: 10px;
+    padding: 5px;
     justify-content: space-between;
+}
+.slider img{
+    border-radius: 10px;
+    padding: 5px;
 }
 
 h3{
@@ -113,9 +114,46 @@ h3{
 }
 .bang-ykien{
     padding-top: 15px;
-    padding-left: 45px;
+    padding-left: 100px;
     padding-bottom: 50px;
+
 }
+
 .hat3{
     padding-left: 20px;
+}
+.col{
+    align-content: space-around;
+    border: 2px solid black;
+    
+}
+.mot{
+    color: #FF3333;
+	font-size: 30px;
+	position: absolute;
+	top: 16vw;
+	left: 1vw;
+	opacity: 1;
+}
+.suynghi{
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+}
+.suynghivethucung{
+    padding: 50px;
+}
+table{
+    font-size: 1.5em;
+    text-align: center;
+    width: 50%;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 2em;
+}
+.thongtin{
+    margin-left: 70px;
+}
+.bangthongtin{
+    margin-bottom: 40px;
 }

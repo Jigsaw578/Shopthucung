@@ -14,40 +14,61 @@
 	</head>
 	<body style="background-image: url(images/background.jpg); background-size: 100% 100%;">
 
-		<header class="sticky-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 menu">
-                        <a href="Trangchu.html"><img src="images/logo.png"></a>
-                    </div>
-                    <div class="col-2">
-                        
-                    </div>
-                    <div class="col-8 menu">
-                        <ul>
-                            <li><a href="Trangchu.html">Trang chủ</a></li>
-                            <li><a href="thucung.html">Thú cưng</a>
-                                <ul class="menu_child">
-                                    <li><a href="">Corgi</a></li>
-                                    <li><a href="">Husky</a></li>
-                                    <li><a href="">Pomeranian</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="vatdung.html">Vật dụng</a>
-                                <ul class="menu_child">
-                                    <li><a href="">Thức ăn chó</a></li>
-                                    <li><a href="">Thức ăn mèo</a></li>
-                                    <li><a href="">Chuồng thú cưng</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Liên hệ</a></li>						
-                            <li><a href="dangnhap.php">Đăng nhập</a></li>
-                            <li><a href="dangky.php">Đăng kí</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <header class="sticky-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-2 menu">
+					<a href="trangchu.php"><img src="images/logo.png"></a>
+				</div>
+				<div class="col2 menu2">
+					<ul>
+						<li><a href="trangchu.php">Trang chủ</a></li>
+						<li><a href="thucung.php">Thú cưng</a>
+							<ul class="menu_child">
+								<li><a href="">Corgi</a></li>
+								<li><a href="">Husky</a></li>
+								<li><a href="">Pomeranian</a></li>
+							</ul>
+						</li>
+						<li><a href="vatdung.php">Vật dụng</a>
+							<ul class="menu_child">
+								<li><a href="">Thức ăn chó</a></li>
+								<li><a href="">Thức ăn mèo</a></li>
+								<li><a href="">Chuồng thú cưng</a></li>
+							</ul>
+						</li>
+						<li><a href="">Liên hệ</a></li>	
+					</ul>
+				</div>
+				<div class="col-8 menu">
+					<?php 
+                        if(empty($_SESSION['user'])){
+	
+                	?>	
+					<ul>
+							
+							<li><a href="dangnhap.php">Đăng nhập</a></li>
+							<li><a href="dangky.php">Đăng kí</a></li>
+					</ul>
+					<?php    
+
+                        }else{
+                    ?>
+					
+					<ul>
+						<li><img class="user" src="images/user.png" style="height: 40px; margin-left: 30px;">
+                            <ul class="menu_child">
+								<li style="color: white; font-size: 20px;">Xin chào: <span style="color: blue;"><?=$_SESSION['user']?> </span></li>
+								<li><a href="giohang.html">Giỏ hàng</a></li>
+								<li><a href="logout.php">Log out</a></li>
+							</ul>
+                        </li>
+					</ul>
+					<?php }?>
+				</div>
+			</div>
+		</div>
+	</header>
 
 		<div class="container2">
 			<form class="form-login" action="login_submit.php" method="POST" autocomplete="off">
@@ -64,7 +85,7 @@
                     <?php
                         if( isset($_SESSION["thongbao"]) ) {
                             echo $_SESSION["thongbao"];
-                            // session_unset("thongbao");
+                            unset($_SESSION["thongbao"]);
                         }
                     ?>
                 </span>

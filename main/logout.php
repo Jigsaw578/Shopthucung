@@ -1,5 +1,5 @@
 <?php
     session_start();
-    session_unset("user");
-    header('location:Trangchu.html');
+    unset($_SESSION['user']);
+    header('location:trangchu.php');
 ?>

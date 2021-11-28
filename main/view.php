@@ -13,30 +13,57 @@
 
 </head>
 <body style="background-image: url(images/background.jpg); background-size: 100% 100%;">
-	<header class="sticky-top">
+<header class="sticky-top">
 		<div class="container">
 			<div class="row">
 				<div class="col-2 menu">
-					<a href="Trangchu.html"><img src="images/logo.png"></a>
+					<a href="trangchu.php"><img src="images/logo.png"></a>
 				</div>
-				<div class="col-2">
-					
-				</div>
-				<div class="col-8 menu">
+				<div class="col2 menu2">
 					<ul>
-						<li><a href="Trangchu.html">Trang chủ</a></li>
-						<li><a href="">Thú cưng</a>
+						<li><a href="trangchu.php">Trang chủ</a></li>
+						<li><a href="thucung.php">Thú cưng</a>
 							<ul class="menu_child">
 								<li><a href="">Corgi</a></li>
 								<li><a href="">Husky</a></li>
 								<li><a href="">Pomeranian</a></li>
 							</ul>
 						</li>
-						<li><a href="">Vật dụng</a></li>
-						<li><a href="">Liên hệ</a></li>						
-						<li><a href="dangnhap.php">Đăng nhập</a></li>
-						<li><a href="dangky.php">Đăng kí</a></li>
+						<li><a href="vatdung.php">Vật dụng</a>
+							<ul class="menu_child">
+								<li><a href="">Thức ăn chó</a></li>
+								<li><a href="">Thức ăn mèo</a></li>
+								<li><a href="">Chuồng thú cưng</a></li>
+							</ul>
+						</li>
+						<li><a href="">Liên hệ</a></li>	
 					</ul>
+				</div>
+				<div class="col-8 menu">
+					<?php 
+                        if(empty($_SESSION['user'])){
+	
+                	?>	
+					<ul>
+							
+							<li><a href="dangnhap.php">Đăng nhập</a></li>
+							<li><a href="dangky.php">Đăng kí</a></li>
+					</ul>
+					<?php    
+
+                        }else{
+                    ?>
+					
+					<ul>
+						<li><img class="user" src="images/user.png" style="height: 40px; margin-left: 30px;">
+                            <ul class="menu_child">
+								<li style="color: white; font-size: 20px;">Xin chào: <span style="color: blue;"><?=$_SESSION['user']?> </span></li>
+								<li><a href="giohang.html">Giỏ hàng</a></li>
+								<li><a href="logout.php">Log out</a></li>
+							</ul>
+                        </li>
+					</ul>
+					<?php }?>
 				</div>
 			</div>
 		</div>
@@ -75,7 +102,7 @@
                                         <div class="desc1_span_3_of_2">
                                             <h3 class="m_3"><?php echo $item['name']; ?></h3>
                                             <p class="m_text2"><?php echo $item['mota']; ?></p> 
-                                                <p class="m_5"><?php echo $item['price']; ?></p>
+                                                <p class="m_5"><?php echo $item['price']; ?> VND</p>
                                                     <div class="title">
                                                         <form>
                                                             <input type="submit" value="buy" title="">
@@ -113,7 +140,7 @@
     <h3 class="hat3">MỘT SỐ THÚ CƯNG KHÁC</h3>
     
 
-    <div class="supper-col-one">
+    <div class="row2" style="margin: 0px 20px;">
     <?php
         include "connect_db.php";
         $sql = "SELECT *FROM sanpham";

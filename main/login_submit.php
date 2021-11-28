@@ -10,7 +10,7 @@
 
         if (mysqli_num_rows($user) > 0) {
             $_SESSION["user"] = $username;
-            header("Location:Trangchu2.html");
+            header("Location:trangchu.php");
         }
         else{
             $_SESSION["thongbao"] = "Sai tên đăng nhập hoặc mật khẩu";

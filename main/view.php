@@ -58,7 +58,7 @@
 						<li><img class="user" src="images/user.png" style="height: 40px; margin-left: 30px;">
                             <ul class="menu_child">
 								<li style="color: white; font-size: 20px;">Xin chào: <span style="color: blue;"><?=$_SESSION['user']?> </span></li>
-								<li><a href="giohang.html">Giỏ hàng</a></li>
+								<li><a href="giohang.php">Giỏ hàng</a></li>
 								<li><a href="logout.php">Log out</a></li>
 							</ul>
                         </li>
@@ -103,11 +103,28 @@
                                             <h3 class="m_3"><?php echo $item['name']; ?></h3>
                                             <p class="m_text2"><?php echo $item['mota']; ?></p> 
                                                 <p class="m_5"><?php echo $item['price']; ?> VND</p>
-                                                    <div class="title">
-                                                        <form>
-                                                            <input type="submit" value="buy" title="">
+                                                <?php
+                                                    echo '<div class="title">
+                                                        <form action="giohang.php" method="post">
+                                                            <input type="number" name="soluong" min="1" max="10" value="1">
+                                                            <input type="submit" name="addcart" value="Thêm vào giỏ hàng" >
+                                                            
+                                                            <input type="hidden" name="tensp" value="'.$item['name'].'">
+                                                            <input type="hidden" name="gia" value="'.$item['price'].'">
+                                                            <input type="hidden" name="hinh" value="'.$item['img'].'">
+
                                                         </form>
-                                                    </div>
+                                                    </div>'
+                                                ?>    
+                                                    <!-- <div class="title">
+                                                        <form action="giohang.php" method="post">
+                                                            <input type="number" name="soluong" min="1" max="10" value="1">
+                                                            <input type="submit" value="buy" title="">
+                                                            <input type="hidden" name="tensp" value="">
+                                                            <input type="hidden" name="gia" value="10">
+                                                            <input type="hidden" name="hinh" value="1.jpg">
+                                                        </form>
+                                                    </div> -->
                                                 
                                          </div>
                                  </div>

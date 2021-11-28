@@ -59,7 +59,7 @@ include "connect_db.php";
 						<li><img class="user" src="images/user.png" style="height: 40px; margin-left: 30px;">
                             <ul class="menu_child">
 								<li style="color: white; font-size: 20px;">Xin chào: <span style="color: blue;"><?=$_SESSION['user']?> </span></li>
-								<li><a href="giohang.html">Giỏ hàng</a></li>
+								<li><a href="giohang.php">Giỏ hàng</a></li>
 								<li><a href="logout.php">Log out</a></li>
 							</ul>
                         </li>

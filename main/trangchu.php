@@ -20,27 +20,24 @@ include "connect_db.php";
 				<div class="col-2 menu">
 					<a href="trangchu.php"><img src="images/logo.png"></a>
 				</div>
-				<div class="col2 menu2">
-					<ul>
-						<li><a href="trangchu.php">Trang chủ</a></li>
-						<li><a href="thucung.php">Thú cưng</a>
-							<ul class="menu_child">
-								<li><a href="">Corgi</a></li>
-								<li><a href="">Husky</a></li>
-								<li><a href="">Pomeranian</a></li>
-							</ul>
-						</li>
-						<li><a href="vatdung.php">Vật dụng</a>
-							<ul class="menu_child">
-								<li><a href="">Thức ăn chó</a></li>
-								<li><a href="">Thức ăn mèo</a></li>
-								<li><a href="">Chuồng thú cưng</a></li>
-							</ul>
-						</li>
-						<li><a href="">Liên hệ</a></li>	
-					</ul>
+
+				<div class="box">
+					<form class="sbox" action="/search" method="get">
+						<input class="stext" type="text" name="q" placeholder="Tìm kiếm sản phẩm...">
+						<a class="sbutton" type="submit" href="javascript:void(0);">
+						<i class="fa fa-search"></i>
+						</a>
+					</form>
 				</div>
+
+				<div class="col2 menu2">
+					
+				</div>
+
 				<div class="col-8 menu">
+					<ul>
+						<li><a href="">Liên hệ</a></li>
+					</ul>
 					<?php 
                         if(empty($_SESSION['user'])){
 	
@@ -66,6 +63,51 @@ include "connect_db.php";
 					</ul>
 					<?php }?>
 				</div>
+			</div>
+		</div>
+		<div class="sptitle-col2">
+			<div class="title-col2 spmenu">
+				<img src="images/iconmenu.png"><span class="danhmuc">Danh mục sản phẩm</span>
+				<ul>
+					<li><a href="thucung.html">Chó</a>
+						<ul class="spmenu_child">
+							<li><a href="">Corgi</a></li>
+							<li><a href="">Husky</a></li>
+							<li><a href="">Pomeranian</a></li>
+							<li><a href="">Alaskan</a></li>
+							<li><a href="">Becgie</a></li>
+							<li><a href="">Labrador</a></li>
+							<li><a href="">American Eskimo</a></li>
+							<li><a href="">Samoyed</a></li>
+							<li><a href="">Yorkshire Terrier</a></li>
+						</ul>
+					</li>
+					<li><a href="vatdung.html">Mèo</a>
+						<ul class="spmenu_child">
+							<li><a href="">Munchkin</a></li>
+							<li><a href="">Balinese</a></li>
+							<li><a href="">Somali</a></li>
+							<li><a href="">Ragdoll</a></li>
+							<li><a href="">Mèo Mướp</a></li>
+							<li><a href="">Mèo lông dài </a></li>
+							<li><a href="">Mèo lông ngắn</a></li>
+							<li><a href="">Mèo Ba Tư</a></li>
+						</ul>
+					</li>
+					<li><a href="vatdung.html">Phụ kiện</a>
+						<ul class="spmenu_child">
+							<li><a href="">Thức ăn chó</a></li>
+							<li><a href="">Thức ăn mèo</a></li>
+							<li><a href="">Chuồng thú cưng</a></li>
+							<li><a href="">Vòng cổ, rọ mõn</a></li>
+							<li><a href="">Đồ chơi, Đồ huấn luyện</a></li>
+							<li><a href="">Cát vệ sinh cho mèo</a></li>
+							<li><a href="">Đồ dùng cho mèo</a></li>
+							<li><a href="">Đồ dùng cho Chó/a></li>
+						</ul>
+					</li>
+				</ul>
+				<div ><a href="https://www.facebook.com/"><img class="face" src="images/logofb.png"> </a><a href="https://www.youtube.com/"><img class="tube" src="images/logoyt.png"></a></div>
 			</div>
 		</div>
 	</header>
@@ -138,46 +180,82 @@ include "connect_db.php";
 		</div>
 	</div>
 	
-	<footer>
-		<div class="container">
-			<div class="row footer">
-				<div class="col-3">
-					<h3>FACEBOOK</h3>
+	<footer class="footer-max">
+		<div class="image-footer">
+			<div class="one-footer">
+				<div><img src="images/tinnhan.png"></div>
+				<div>
+					<form id="form2" class="form2">
+						<div><input type="text" id="fcontent" name="fcontent" placeholder="Đăng kí nhận tin"><br></div>
+						<div class="dangky"><input type="submit" value="Đăng Ký"></div>
+					</form>
 				</div>
-				<div class="col-3">
-					<h3>FROM TWITTER</h3>
-					<ul class="menu_footer">
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+			</div>
+
+			<div class="two-footer">
+				<div><img src="images/xe.png"></div>
+				<div class="giaohang">Giao hàng miễn phí tại Hà Nội </div>
+			</div>
+
+			<div class="three-footer">
+				<img src="images/nganhang.png">
+			</div>
+		</div>
+
+		<div class="thongtin-footer">
+			<div class="chungtoi">
+				<div>
+					<h3>Về chúng tôi</h3>
+					<ul>
+						<li>Giới thiệu</li>
+						<li>Các chi nhánh</li>
+						<li>Liên hệ</li>
 					</ul>
+					<p><img src="images/logo.png"></p>
 				</div>
-				<div class="col-3">
-					<h3>INFORMATION</h3>
-					<ul class="menu_footer">
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-					</ul>
-				</div>
-				<div class="col-3">
-					<h3>CONTACT US</h3>
-					<ul class="menu_footer">
-						<li><a href=""></a></li>
-						<li><a href="">Phone:(00) 222 666 444</a></li>
-						<li><a href="">Fax: (000) 000 00 00 0</a></li>
-						<li><a href="">Email: abc.190010xx@st.phenikaa-uni.edu.vn</a></li>
+				<div class="hotro">
+					<h3>Hỗ trợ khách hàng</h3>
+					<ul>
+						<li>Hướng dẫn mua hàng</li>	
+						<li>Điều khoản và điều kiện</li>
+						<li>Điều khoản và điều kiện</li>
+						<li>Chính sách giao hàng</li>
+						<li>Chính sách đổi trả</li>
+						<li>Hướng dẫn gửi trả hàng</li>
+						<li>Chính sách bảo hành</li>
+						<li>Mua trả góp</li>
+						<li>Chất lượng dịch vụ</li>
 					</ul>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 copy_right">
-				<a href="">No copyRight designer By abc.190010xx@st.phenikaa-uni.edu.vn</a>
+
+			<div class="hotrotimkiem">
+				<h3>Hỗ trợ tìm kiếm</h3>
+				<a href=""><span>Mèo lông ngắn</span></a>
+				<a href=""><span>Mèo Mướp</span> </a>
+				<a href=""><span>Munchkin</span></a>
+				<a href=""><span>Balinese</span></a>
+				<a href=""><span>Somali</span></a>
+				<a href=""><span>Ragdoll</span></a>
+			</div>
+
+			<div class="diachilienhe">
+				<h3>Địa chỉ liên hệ</h3>
+				<ul>
+					<li>81-95 Nghi Tàm, phường Yên Phụ, quận Tây Hồ, Tp Hà Nội. Chỉ đường.</li>
+					<li>606/121 đường Ba Tháng Hai, phường 14, quận 10, thành phố Hồ Chí Minh Chỉ đường</li>
+					<li>171 Quang Trung, phường 10, quận Gò Vấp, thành phố Hồ Chí Minh. Chỉ đường. </li>
+					<li>391 Đường Cộng Hoà, phường 13, quận Tân Bình, thành phố Hồ Chí Minh Chỉ đường</li>
+					<li>108 Lý Nam Đế, phường 8, thành phố Đà Lạt, tỉnh Lâm Đồng. Chỉ đường.</li>
+					<li>Email: dogily.vn@gmail.com</li>
+					<li>Hotline mua thú cưng: 0916299911 và 0965086079</li>
+					<li>Hotline phụ kiện: 0392086079</li>
+					<li>https://dogily.vn</li>
+				</ul>
 			</div>
 		</div>
+
+
 	</footer>
 	
 </body>

@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="Versatile/jquery.easy_slides.css" rel="stylesheet">
     <link rel="stylesheet" href="css/xemhang.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -13,18 +15,18 @@
 
 </head>
 <body style="background-image: url(images/background.jpg); background-size: 100% 100%;">
-<header class="sticky-top">
+	<header class="sticky-top">
 		<div class="container">
 			<div class="row">
 				<div class="col-2 menu">
-					<a href="trangchu.php"><img src="images/logo.png"></a>
+					<a href="Trangchu.html"><img src="images/logo.png"></a>
 				</div>
-				<div class="col2 menu2">
+                <div class="col-2">
 					
 				</div>
 				<div class="col-8 menu">
                     <ul>
-                        <li><a href="">Liên hệ</a></li>
+                        <li><a href="">Liên hệ</a></li>	
                     </ul>
 					<?php 
                         if(empty($_SESSION['user'])){
@@ -44,7 +46,7 @@
 						<li><img class="user" src="images/user.png" style="height: 40px; margin-left: 30px;">
                             <ul class="menu_child">
 								<li style="color: white; font-size: 20px;">Xin chào: <span style="color: blue;"><?=$_SESSION['user']?> </span></li>
-								<li><a href="giohang.php">Giỏ hàng</a></li>
+								<li><a href="giohang.html">Giỏ hàng</a></li>
 								<li><a href="logout.php">Log out</a></li>
 							</ul>
                         </li>
@@ -53,7 +55,8 @@
 				</div>
 			</div>
 		</div>
-        <div class="sptitle-col2">
+
+		<div class="sptitle-col2">
 			<div class="title-col2 spmenu">
 				<img src="images/iconmenu.png"><span class="danhmuc">Danh mục sản phẩm</span>
 				<ul>
@@ -100,62 +103,28 @@
 		</div>
 	</header>
 
-
-        <div class="main" style="justify-content: space-between;">
-                    
-            <div class="wrap">
-                <ul class="breadcrumb"><a class="home" href="Trangchu.html">Trang chủ</a> / <a href="#">Thú cưng</a> / <a>Alaskan</a></ul>
-                                
-                <?php
-                            include "connect_db.php";
-                            $this_id= $_GET['this_id'];
-                            
-                            $sql = "SELECT * FROM sanpham WHERE id='$this_id'";
-
-                            
-                            $result = mysqli_query($conn,$sql)
-                            
-
-                        ?>
-
-                        <?php foreach ($result as $item) { ?>
-                <?php } ?>        
-                            
-                            <div class="span_2_of_3" style="justify-content: space-between;">
+    <div class="mens">
+         <div class="main">
+                    <div class="wrap">
+                             <ul class="breadcrumb"><a class="home" href="Trangchu.html">Trang chủ</a> / <a href="#">Thú cưng</a> / <a>Husky</a></ul>
+                                <div class="span_2_of_3">
                                         <div class="images_3_of_2">
                                                 <ul class="etalage">
                                                     <li>
-                                                        <img class="etalage_thumb_image" src="./upload/<?php echo $item['img']; ?>" class="img-responsive" width="100%" height="400px">                                     
+                                                        <img class="etalage_thumb_image" src="images/Husky3.jpg" class="img-responsive" />                                     
                                                     </li>
                                                 </ul>
                                          </div>
 
                                         <div class="desc1_span_3_of_2">
-                                            <h3 class="m_3"><?php echo $item['name']; ?></h3>
-                                            <p class="m_text2"><?php echo $item['mota']; ?></p> 
-                                                <p class="m_5"><?php echo $item['price']; ?> VND</p>
-                                                <?php
-                                                    echo '<div class="title">
-                                                        <form action="giohang.php" method="post">
-                                                            <input type="number" name="soluong" min="1" max="10" value="1">
-                                                            <input type="submit" name="addcart" value="Thêm vào giỏ hàng" >
-                                                            
-                                                            <input type="hidden" name="tensp" value="'.$item['name'].'">
-                                                            <input type="hidden" name="gia" value="'.$item['price'].'">
-                                                            <input type="hidden" name="hinh" value="'.$item['img'].'">
-
-                                                        </form>
-                                                    </div>'
-                                                ?>    
-                                                    <!-- <div class="title">
-                                                        <form action="giohang.php" method="post">
-                                                            <input type="number" name="soluong" min="1" max="10" value="1">
+                                            <h3 class="m_3">Husky</h3>
+                                            <p class="m_text2">Thật dễ dàng để thấy tại sao nhiều người lại bị thu hút bởi kiểu sói giống như sói của Siberi, nhưng hãy lưu ý rằng con chó thông minh và thể thao này có thể độc lập và đầy thử thách đối với chủ sở hữu chó đầu tiên. </p> 
+                                                <p class="m_5">5.000.000 VNĐ</p>
+                                                    <div class="title">
+                                                        <form>
                                                             <input type="submit" value="buy" title="">
-                                                            <input type="hidden" name="tensp" value="">
-                                                            <input type="hidden" name="gia" value="10">
-                                                            <input type="hidden" name="hinh" value="1.jpg">
                                                         </form>
-                                                    </div> -->
+                                                    </div>
                                                 
                                          </div>
                                  </div>
@@ -184,38 +153,84 @@
                             </section>
                      </div>
              </div>   
-    
-    <h3 class="hat3">MỘT SỐ THÚ CƯNG KHÁC</h3>
-    
-
-    <div class="row2" style="margin: 0px 20px;">
-    <?php
-        include "connect_db.php";
-        $sql = "SELECT *FROM sanpham";
-        $result = mysqli_query($conn,$sql);
-    ?>
-    <?php foreach ($result as $item) { ?>
-
-        <div class="col-2th ">
-            <div class="card">
-                <div class="image">
-					<a href="view.php?this_id=<?php echo $item['id'] ?>">
-                        <img src="./upload/<?php echo $item['img']; ?>">
-                    </a>
-				</div>
-				
-					<a class="name" href="view.php?this_id=<?php echo $item['id'] ?>"><?php echo $item['name']; ?></a>
-				
-				
-					<a href="view.php?this_id=<?php echo $item['id'] ?>" ><p class="price"><?php echo $item['price']; ?> VND</p></a>
-				
-            </div>
-        </div>
-    <?php } ?>
-    
     </div>
+    <div class="bangthongtin">
+        <h3 class="thongtin">Thông tin về thú cưng</h3>
+        <table border="1">
+            <caption>Bảng Thông tin thú cưng</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2" width="300px">Đặc điểm</th>
+                    <th rowspan="3">Thông tin thú cưng</th>
+                </tr>
+            </thead>
 
+            <tbody>
+                <tr>
+                    <td>Chủng loài</td>
+                    <td>Alaskan</td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>Giống cái</td>
+                </tr>
+                <tr>
+                    <td>Cân nặng</td>
+                    <td>17 Kilogam</td>
+                </tr>
+                <tr>
+                    <td>Độ tuổi</td>
+                    <td>17 tháng</td>
+                </tr>
+                <tr>
+                    <td>Tình trạng sức khỏe</td>
+                    <td>Tốt</td>
+                </tr>
+                    <td>Tình trạng tiêm Vác-xin</td>
+                    <td>Đã tiên đầy đủ</td>
+                </tr>
+                <tr>
+                    <td>Đặc điểm ngoại hình</td>
+                    <td>Lông trắng, rất ngáo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <section>
+        <h3 class="hat3">MỘT SỐ THÚ CƯNG KHÁC</h3>
+        <div class="slider slider_four_in_line">
+            <div class="col">
+				<a href="golden.html"><img src="images/Golden.jpg"></a>
+               <p class="mot"> Golden-5.000.000Đ </p>
+			</div>
+            
+            <div class="col">
+			    <a href="becgie.html"><img src="images/Becgie.jpg"></a>
+                <p class="mot">Becgie-5.000.000Đ</p>
+			</div>
     
+            <div class="col">
+				<a href="alskan.html"><img src="images/Alaskan1.jpg"></a>
+                <p class="mot">Alaskan-5.000.000Đ</p>
+			</div>
+        
+            <div class="col">
+				<a href="husky.html"><img src="images/Husky3.jpg"></a>
+                <p class="mot">Husky-5.000.000Đ</p>
+			</div>
+    
+            <div class="next_button"></div>
+            <div class="prev_button"></div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('.slider_four_in_line').EasySlides({
+                    'autoplay': true,
+                    'show': 9
+                })
+            });
+        </script>
+    </section>
 
     <div class="suynghivethucung"> 
         <h3 class="suynghi">Suy nghĩ về những chú thú cưng</h3>
@@ -235,7 +250,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 <footer class="footer-max">
@@ -312,5 +326,7 @@
             </ul>
         </div>
     </div>
+
+
 </footer>
 </html>

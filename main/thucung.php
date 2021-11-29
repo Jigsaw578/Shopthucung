@@ -15,26 +15,12 @@
 					<a href="trangchu.php"><img src="images/logo.png"></a>
 				</div>
 				<div class="col2 menu2">
-					<ul>
-						<li><a href="trangchu.php">Trang chủ</a></li>
-						<li><a href="thucung.php">Thú cưng</a>
-							<ul class="menu_child">
-								<li><a href="">Corgi</a></li>
-								<li><a href="">Husky</a></li>
-								<li><a href="">Pomeranian</a></li>
-							</ul>
-						</li>
-						<li><a href="vatdung.php">Vật dụng</a>
-							<ul class="menu_child">
-								<li><a href="">Thức ăn chó</a></li>
-								<li><a href="">Thức ăn mèo</a></li>
-								<li><a href="">Chuồng thú cưng</a></li>
-							</ul>
-						</li>
-						<li><a href="">Liên hệ</a></li>	
-					</ul>
+					
 				</div>
 				<div class="col-8 menu">
+					<ul>
+                        <li><a href="">Liên hệ</a></li>	
+                    </ul>
 					<?php 
                         if(empty($_SESSION['user'])){
 	
@@ -60,6 +46,51 @@
 					</ul>
 					<?php }?>
 				</div>
+			</div>
+		</div>
+		<div class="sptitle-col2">
+			<div class="title-col2 spmenu">
+				<img src="images/iconmenu.png"><span class="danhmuc">Danh mục sản phẩm</span>
+				<ul>
+					<li><a href="thucung.html">Chó</a>
+						<ul class="spmenu_child">
+							<li><a href="">Corgi</a></li>
+							<li><a href="">Husky</a></li>
+							<li><a href="">Pomeranian</a></li>
+							<li><a href="">Alaskan</a></li>
+							<li><a href="">Becgie</a></li>
+							<li><a href="">Labrador</a></li>
+							<li><a href="">American Eskimo</a></li>
+							<li><a href="">Samoyed</a></li>
+							<li><a href="">Yorkshire Terrier</a></li>
+						</ul>
+					</li>
+					<li><a href="vatdung.html">Mèo</a>
+						<ul class="spmenu_child">
+							<li><a href="">Munchkin</a></li>
+							<li><a href="">Balinese</a></li>
+							<li><a href="">Somali</a></li>
+							<li><a href="">Ragdoll</a></li>
+							<li><a href="">Mèo Mướp</a></li>
+							<li><a href="">Mèo lông dài </a></li>
+							<li><a href="">Mèo lông ngắn</a></li>
+							<li><a href="">Mèo Ba Tư</a></li>
+						</ul>
+					</li>
+					<li><a href="vatdung.html">Phụ kiện</a>
+						<ul class="spmenu_child">
+							<li><a href="">Thức ăn chó</a></li>
+							<li><a href="">Thức ăn mèo</a></li>
+							<li><a href="">Chuồng thú cưng</a></li>
+							<li><a href="">Vòng cổ, rọ mõn</a></li>
+							<li><a href="">Đồ chơi, Đồ huấn luyện</a></li>
+							<li><a href="">Cát vệ sinh cho mèo</a></li>
+							<li><a href="">Đồ dùng cho mèo</a></li>
+							<li><a href="">Đồ dùng cho Chó/a></li>
+						</ul>
+					</li>
+				</ul>
+				<div ><a href="https://www.facebook.com/"><img class="face" src="images/logofb.png"> </a><a href="https://www.youtube.com/"><img class="tube" src="images/logoyt.png"></a></div>
 			</div>
 		</div>
 	</header>
